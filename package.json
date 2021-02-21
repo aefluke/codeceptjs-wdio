@@ -20,7 +20,7 @@
         "@codeceptjs/configure": "^0.6.2",
         "@codeceptjs/examples": "^1.2.1",
         "@codeceptjs/ui": "^0.4.3",
-        "@wdio/selenium-standalone-service": "^7.0.4",
+        "@wdio/selenium-standalone-service": "^7.0.7",
         "codeceptjs": "^3.0.5",
         "codeceptjs-chai": "^2.2.0",
         "webdriverio": "^6.12.1"

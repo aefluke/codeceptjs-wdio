@@ -57,6 +57,7 @@ module.exports = {
   },
 
   selectSecurityFilter(label) {
+    I.scrollTo(securityFilter(label));
     I.click(securityFilter(label));
   },
 

@@ -50,12 +50,12 @@ exports.config = {
     },
     "parallel": {
       "chunks": 2,
-      "browsers": ["chrome", "firefox"]
+      "browsers": process.env.BROWSERS.split(',')
     }
   },
   plugins: {
     wdio: {
-      enabled: true,
+      enabled: false,
       services: ['selenium-standalone']
     },
     pauseOnFail: {},
