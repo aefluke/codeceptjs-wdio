@@ -1,6 +1,6 @@
 Feature('home_page_opens_successfully');
 
-Before(({ I, homePage }) => {
+Before(({ homePage }) => {
     homePage.go();
 });
 

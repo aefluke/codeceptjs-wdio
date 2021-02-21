@@ -1,6 +1,6 @@
 Feature('search');
 
-Before(({ I, homePage }) => {
+Before(({ homePage }) => {
     homePage.go();
 });
 

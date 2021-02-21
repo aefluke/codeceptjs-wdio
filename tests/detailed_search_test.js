@@ -4,7 +4,7 @@ Before(({ detailedSearchPage }) => {
     detailedSearchPage.go();
 });
 
-Scenario('test detailed search with specific filters that results not found', ({ I, detailedSearchPage }) => {
+Scenario('test detailed search with specific filters and no results found', ({ I, detailedSearchPage }) => {
 
     detailedSearchPage.selectCategories('Vasıta', 'Motosiklet', 'Yamaha', 'MT-07 ABS');
     detailedSearchPage.fillYearInterval(1998, 1999);
