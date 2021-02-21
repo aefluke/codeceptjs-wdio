@@ -7,6 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "codeceptjs": "codeceptjs run --steps",
         "codeceptjs:parallel": "codeceptjs run-multiple parallel",
+        "codeceptjs:docker": "docker run --net=host -v $PWD:/tests -e REMOTE=true -e HEADLESS=true -e BROWSERS='chrome,firefox' codeception/codeceptjs npm run codeceptjs:parallel",
         "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app",
         "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js",

@@ -1,4 +1,11 @@
 # sahibinden-ui
-docker pull codeception/codeceptjs
-docker-compose up -d
-docker run --net=host -v $PWD:/tests -e REMOTE=true -e HEADLESS=true -e BROWSERS="chrome,firefox" codeception/codeceptjs npm run codeceptjs:parallel
+
+Install requirements:
+sudo chmod 755 'setup.sh'
+./setup.sh
+
+Execute Local Docker Selenium Grid:
+npm run codeceptjs:docker
+
+Execute Locally:
+npm run codeceptjs
