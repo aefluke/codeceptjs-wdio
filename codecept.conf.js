@@ -11,6 +11,8 @@ exports.config = {
     WebDriver: {
       url: 'https://www.sahibinden.com',
       browser: 'chrome',
+      host: '127.0.0.1',
+      port: 4444,
       desiredCapabilities: {
         chromeOptions: {
           args: ['--disable-extensions', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage']
@@ -43,12 +45,12 @@ exports.config = {
     "chrome": {
       "browsers": ["chrome"]
     },
-    "opera": {
-      "browsers": ["opera"]
+    "firefox": {
+      "browsers": ["firefox"]
     },
     "parallel": {
       "chunks": 2,
-      "browsers": ["chrome", "opera"]
+      "browsers": ["chrome", "firefox"]
     }
   },
   plugins: {
