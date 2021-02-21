@@ -6,11 +6,6 @@ services:
     ports:
       - "4444:4444"
 
-    environment:
-      GRID_MAX_SESSION: 16
-      GRID_BROWSER_TIMEOUT: 3000
-      GRID_TIMEOUT: 3000
-
   chrome:
     image: selenium/node-chrome
     container_name: web-automation_chrome
