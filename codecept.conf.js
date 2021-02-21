@@ -4,6 +4,8 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
 
+const browsers = () => { return (process.env.BROWSERS) ? process.env.BROWSERS.split(',') : ["chrome","firefox"]; };
+
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
@@ -50,7 +52,7 @@ exports.config = {
     },
     "parallel": {
       "chunks": 2,
-      "browsers": process.env.BROWSERS.split(',')
+      "browsers": browsers()
     }
   },
   plugins: {
