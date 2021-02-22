@@ -57,7 +57,7 @@ exports.config = {
   },
   plugins: {
     wdio: {
-      enabled: !(process.env.REMOTE),
+      enabled: !(process.env.DOCKER),
       services: ['selenium-standalone']
     },
     pauseOnFail: {},
