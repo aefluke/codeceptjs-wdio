@@ -4,7 +4,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
 
-const browsers = () => { return (process.env.BROWSERS) ? process.env.BROWSERS.split(',') : ["chrome","firefox"]; };
+const browsers = () => { return (process.env.BROWSERS) ? process.env.BROWSERS.split(',') : ["chrome", "firefox"]; };
 
 exports.config = {
   tests: './tests/*_test.js',
@@ -13,8 +13,6 @@ exports.config = {
     WebDriver: {
       url: 'https://www.sahibinden.com',
       browser: 'chrome',
-      host: '127.0.0.1',
-      port: 4444,
       desiredCapabilities: {
         chromeOptions: {
           args: ['--disable-extensions', '--disable-gpu', '--no-sandbox', '--disable-dev-shm-usage']
@@ -57,7 +55,7 @@ exports.config = {
   },
   plugins: {
     wdio: {
-      enabled: !(process.env.DOCKER),
+      enabled: true,
       services: ['selenium-standalone']
     },
     pauseOnFail: {},
