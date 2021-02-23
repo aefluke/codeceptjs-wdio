@@ -1,5 +1,5 @@
 const merge = require("lodash.merge");
-const { config: baseConfig } = require("../codecept.conf.js");
+const { config: baseConfig } = require("./codecept.conf.js");
 
 const specificConfig = {
     helpers: {
@@ -15,5 +15,4 @@ const specificConfig = {
         }
     }
 };
-
 exports.config = merge(baseConfig, specificConfig);
