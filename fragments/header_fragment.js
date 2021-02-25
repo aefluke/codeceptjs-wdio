@@ -5,7 +5,7 @@ module.exports = {
   root: '.header-container',
   logo: '.logo',
   links: {
-    advancedSearch: 'a[title="Detaylı Arama"]',
+    detailedSearch: 'a[title="Detaylı Arama"]',
     login: 'a[title="Giriş Yap"]',
     register: 'a[title="Üye Ol"]',
   },
@@ -17,8 +17,8 @@ module.exports = {
     submitSearch: '#searchSuggestionForm button[type=submit]'
   },
 
-  goToAdvancedSearch() {
-    I.click(this.links.advancedSearch);
+  goToDetailedSearch() {
+    I.click(this.links.detailedSearch);
   },
 
   search(input) {

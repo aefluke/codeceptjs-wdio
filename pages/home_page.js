@@ -4,9 +4,10 @@ module.exports = {
 
   showcase: {
     title: '//h3[contains(normalize-space(),"Anasayfa Vitrini")]',
-    items: '.showcase ul.vitrin-list li',
+    items: '.showcase ul.vitrin-list li a',
   },
   categories: {
+    leftMenu: '.categories-left-menu',
     vehicleCategory: 'a[title=Vasıta]',
     automobile: 'a[title=Otomobil]',
     suv: 'a[title="Arazi, SUV & Pickup"]',

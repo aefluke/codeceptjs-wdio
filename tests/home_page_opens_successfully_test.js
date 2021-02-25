@@ -9,10 +9,10 @@ Scenario('test if fundamental elements in header on home page are visible', ({ I
     within(headerFragment.root, () => {
 
         I.seeElement(headerFragment.logo);
-        I.seeElement(headerFragment.links.advancedSearch);
+        I.seeElement(headerFragment.fields.search);
+        I.seeElement(headerFragment.links.detailedSearch);
         I.seeElement(headerFragment.links.login);
         I.seeElement(headerFragment.links.register);
-        I.seeElement(headerFragment.fields.search);
         I.seeElement(headerFragment.buttons.postNewClassified);
     });
 
@@ -27,9 +27,11 @@ Scenario('test if correct number of showcase items are displayed', async ({ I, h
 
 Scenario('test if several categories are displayed on left navigation menu', ({ I, homePage }) => {
 
-    I.seeElement(homePage.categories.vehicleCategory);
-    I.seeElement(homePage.categories.automobile);
-    I.seeElement(homePage.categories.suv);
-    I.seeElement(homePage.categories.motorcycle);
+    within(homePage.categories.leftMenu, () => {
+        I.seeElement(homePage.categories.vehicleCategory);
+        I.seeElement(homePage.categories.automobile);
+        I.seeElement(homePage.categories.suv);
+        I.seeElement(homePage.categories.motorcycle);
+    }
 
 });

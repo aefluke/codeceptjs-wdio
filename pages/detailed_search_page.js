@@ -27,7 +27,7 @@ module.exports = {
   go() {
 
     I.amOnPage('/');
-    headerFragment.goToAdvancedSearch();
+    headerFragment.goToDetailedSearch();
   },
 
   selectCategories(firstCategory, secondCategory, thirdCategory, fourthCategory) {
