@@ -1,8 +1,11 @@
 const { setHeadlessWhen } = require('@codeceptjs/configure');
+const setBrowser = require('@codeceptjs/configure/hooks/setBrowser');
+const setWindowSize = require('@codeceptjs/configure/hooks/setWindowSize');
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
+setWindowSize(1600,1200);
 
 const browsers = () => { return (process.env.BROWSERS) ? process.env.BROWSERS.split(',') : ["chrome", "firefox"]; };
 
