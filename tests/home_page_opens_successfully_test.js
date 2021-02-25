@@ -32,6 +32,6 @@ Scenario('test if several categories are displayed on left navigation menu', ({ 
         I.seeElement(homePage.categories.automobile);
         I.seeElement(homePage.categories.suv);
         I.seeElement(homePage.categories.motorcycle);
-    }
+    });
 
 });
