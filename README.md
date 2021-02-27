@@ -1,8 +1,8 @@
 # sahibinden-ui
 
 * Install requirements:
-    >sudo chmod 755 'setup.sh' \
-    >./setup.sh
+    >sudo chmod 755 'macos_setup.sh' \
+    >./macos_setup.sh
 
 * Execute Local Docker Selenium Grid:
     >npm run codeceptjs:docker
