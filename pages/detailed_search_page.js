@@ -30,15 +30,16 @@ module.exports = {
     headerFragment.goToDetailedSearch();
   },
 
-  selectCategories(firstCategory, secondCategory, thirdCategory, fourthCategory) {
-
-    this.selectNthLevelCategory(1, firstCategory);
-    this.selectNthLevelCategory(2, secondCategory);
-    this.selectNthLevelCategory(3, thirdCategory);
-    this.selectNthLevelCategory(4, fourthCategory);
-
+  selectCategories(...categories) {
+    if (categories.length > 4 || categories.length < 1) {
+      I.say('At least 1 and at most 4 arguments must be passed for category selection', 'red');
+      return;
+    }
+    for (var i = 0; i < categories.length ; i++) {
+      this.selectNthLevelCategory(i+1, categories[i]);
+    }
   },
-
+  
   selectNthLevelCategory(n, category) {
 
     I.waitForVisible(nthCategoryList(n));
