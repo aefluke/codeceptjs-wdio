@@ -31,15 +31,15 @@ module.exports = {
   },
 
   selectCategories(...categories) {
-    if (categories.length > 4 || categories.length < 1) {
-      I.say('At least 1 and at most 4 arguments must be passed for category selection', 'red');
-      return;
-    }
-    for (var i = 0; i < categories.length ; i++) {
-      this.selectNthLevelCategory(i+1, categories[i]);
+
+    I.assertLengthAboveThan(categories, 0, 'At least one category must be selected.');
+    I.assertLengthBelowThan(categories, 5, 'At most 4 categories are allowed for filtering');
+
+    for (var i = 0; i < categories.length; i++) {
+      this.selectNthLevelCategory(i + 1, categories[i]);
     }
   },
-  
+
   selectNthLevelCategory(n, category) {
 
     I.waitForVisible(nthCategoryList(n));
